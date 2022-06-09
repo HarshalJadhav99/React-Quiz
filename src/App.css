@@ -1,38 +1,170 @@
 .App {
-  text-align: center;
+  height: 110vh;
+  color: white;
+  background-color: #101427;
+  display: flex;
+  flex-direction: column;
+}
+body{
+  height: 100vh;
+} 
+.container{
+  height: 100%;
+}
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background: url("https://i.pinimg.com/originals/f1/17/23/f11723f9894882a76ce18a626cc5ad69.jpg")
+    center; */
+    justify-content: center;
+  height: 100%;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.quiz {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+}
+
+.question {
+  width: 80%;
+  /* background: linear-gradient(#100241, black); */
+  text-align: center;
+  padding: 20px;
+  /* border-radius: 10px;
+  border: 2px solid white; */
+  font-size: 20px;
+}
+
+.question {
+  width: 100%;
+  /* background: linear-gradient(#100241, black); */
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  /* border-radius: 10px;
+  border: 2px solid white; */
+  font-size: 20px;
+}
+
+.answers {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+}
+
+.answer {
+  width: 40%;
+  padding: 10px;
+  margin: 0 10px 20px 10px;
+  text-align: center;
+  border: 1px solid rgb(97, 106, 148);
+    border-radius: 15px;
+  border-radius: 65px;
+  color: rgb(97, 106, 148);
+    background-color: rgb(22, 26, 49);
+    transition: all 0.3s ease 0s;
+    outline: none;
+  font-weight: 300;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.answer:hover,
+.answer.active {
   color: white;
+    background-color: rgb(97, 106, 148);
 }
 
-.App-link {
-  color: #61dafb;
+.answer.correct {
+  color: white;
+  /* animation: correct  ease forwards; */
+  background: #33d40f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* @keyframes correct {
+  
+  62%,
+  100% {
+    background: #33d40f;
   }
-  to {
-    transform: rotate(360deg);
+} */
+
+.answer.wrong {
+  color: white;
+  /* animation: wrong  ease forwards; */
+  background: red;
+}
+
+/* @keyframes wrong {
+ 
+  62%,
+  100% {
+    background: red;
   }
+} */
+
+.item {
+  display: inline-block;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  width: auto;
+}
+
+.item.active {
+  background-color: teal;
+}
+
+.money {
+  background-color: #020230;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.money-list {
+  padding: 20px;
+  list-style: none;
+  width: 100%;
+}
+
+.amount {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.timer {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 80px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.earned {
+  position: relative;
+  margin: auto;
+  margin-top: 150px;
+  color: #fff;
+  font-weight: 600;
+}
+.winner{
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  color: green;
 }
